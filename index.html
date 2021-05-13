@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="panel">
+      <div class="panel-inner">
+        <div class="comp-lights"></div>
+        <div class="comp-rail"></div>
+        <div class="comp comp-train">
+          <div class="comp-title"><strong>treno</strong> train</div>
+          <div class="lcd-text">
+            <div class="logo">Trenitalia</div>
+            <div>R10426</div>
+          </div>
+        </div>
+        <div class="comp comp-destination">
+          <div class="comp-title"><strong>destinazione</strong> destination</div>
+          <div class="lcd-text">DOMODOSSOLA</div>
+        </div>
+        <div class="comp comp-departure">
+          <div class="comp-title"><strong>partenza</strong> departure</div>
+          <div class="lcd-text">
+            <span>20:26</span><span class="delay-label">RITARDO<br />DELAY</span><span>305'</span>
+          </div>
+        </div>
+        <div class="comp comp-info">
+          <div class="comp-title"><strong>informazioni</strong> information</div>
+          <div class="lcd-text">.25) - mergozzo (21.29) - cuzzago (21.43)</div>
+        </div>
+
+        <div class="comp-clock">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            baseProfile="full"
+            viewBox="0 0 200 200"
+          >
+            <defs>
+              <symbol id="i">
+                <path d="M95.8 0h8.4v30h-8.4z" />
+              </symbol>
+              <symbol id="k">
+                <path d="M95.8 0h8.4v24h-8.4z" />
+              </symbol>
+              <symbol id="j">
+                <path d="M98.2 0h3.6v8h-3.6z" />
+              </symbol>
+              <symbol id="u">
+                <use xlink:href="#i" />
+                <use xlink:href="#j" transform="rotate(6 100 100)" />
+                <use xlink:href="#j" transform="rotate(12 100 100)" />
+                <use xlink:href="#j" transform="rotate(18 100 100)" />
+                <use xlink:href="#j" transform="rotate(24 100 100)" />
+                <use xlink:href="#k" transform="rotate(30 100 100)" />
+                <use xlink:href="#j" transform="rotate(36 100 100)" />
+                <use xlink:href="#j" transform="rotate(42 100 100)" />
+                <use xlink:href="#j" transform="rotate(48 100 100)" />
+                <use xlink:href="#j" transform="rotate(54 100 100)" />
+                <use xlink:href="#k" transform="rotate(60 100 100)" />
+                <use xlink:href="#j" transform="rotate(66 100 100)" />
+                <use xlink:href="#j" transform="rotate(72 100 100)" />
+                <use xlink:href="#j" transform="rotate(78 100 100)" />
+                <use xlink:href="#j" transform="rotate(84 100 100)" />
+              </symbol>
+              <symbol id="l">
+                <path d="M94 0h12v30H94z" />
+              </symbol>
+            </defs>
+            <g clip-path="url(#q)">
+              <g stroke="none" fill="#282828">
+                <use xlink:href="#u" />
+                <use xlink:href="#u" transform="rotate(90 100 100)" />
+                <use xlink:href="#u" transform="rotate(180 100 100)" />
+                <use xlink:href="#u" transform="rotate(270 100 100)" />
+              </g>
+              <path
+                stroke="none"
+                d="M133.7 142.62l-1.9 8.26-8.27-1.9L85.37 87.9l10.18-6.35z"
+                fill="#141414"
+              />
+              <path
+                stroke="none"
+                d="M59.9 20.98l2.27-5.94 5.94 2.28 44.95 100.95-8.22 3.66z"
+                fill="#141414"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,189 @@
+@import url(reset.css);
+
+@font-face {
+  font-family: 'dotmatrix';
+  font-display: swap;
+  src: url(dotmatrix.woff2) format('woff2');
+}
+
+:root {
+  --clr-lcd-text: rgb(255, 243, 200);
+  --clr-lcd-bg: rgb(62, 45, 25);
+  --shw-lcd-text: #ffe000 0 0 10px, #ff3b3b 0 0 20px;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+strong {
+  font-weight: 900;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  align-items: center;
+}
+
+.panel {
+  position: relative;
+  padding: 3rem;
+  width: 76em;
+  height: 30em;
+  margin: 0 auto;
+  background-color: rgb(20, 20, 20);
+}
+
+.panel-inner {
+  position: relative;
+  background-color: black;
+  height: 100%;
+}
+
+.panel-inner > * {
+  position: absolute;
+  /* outline: 1px solid magenta; */
+}
+
+.lcd-text {
+  text-transform: uppercase;
+  background-color: var(--clr-lcd-bg);
+  font-family: dotmatrix;
+  color: var(--clr-lcd-text);
+  font-weight: bold;
+  font-size: inherit;
+  /* text-shadow: orange 0 0 10px; */
+  text-shadow: var(--shw-lcd-text);
+  height: 100%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.comp {
+  display: flex;
+  flex-direction: column;
+  height: 7rem;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.comp-title {
+  color: rgb(200, 200, 200);
+  font-size: 1.3rem;
+  line-height: 2.1;
+}
+
+.comp-title > strong {
+  padding-right: 0.5rem;
+}
+
+.comp-train {
+  width: 18rem;
+  height: 14.7rem;
+  font-size: 5rem;
+}
+
+.comp-train .logo {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+.comp-info {
+  border-top: 1px solid rgb(180, 180, 180);
+  bottom: 0;
+  width: 55rem;
+}
+
+.comp-departure,
+.comp-destination {
+  left: 19.5rem;
+  width: 35.5rem;
+  font-size: 5.5rem;
+}
+
+.comp-departure {
+  top: 7.7rem;
+}
+
+.comp-departure .delay-label {
+  font-size: 2rem;
+  display: inline-block;
+  padding: 0 1rem 0 5rem;
+}
+
+.comp-departure {
+  font-size: 5rem;
+}
+
+.comp-info {
+  font-size: 2.7rem;
+}
+
+.comp-lights {
+  left: 50.5rem;
+}
+
+.comp-lights::before,
+.comp-lights::after {
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  background-color: var(--clr-lcd-bg);
+  border-radius: 50%;
+}
+
+.comp-lights::after {
+  margin-left: 0.5rem;
+}
+
+.comp-lights::before {
+  background-color: var(--clr-lcd-text);
+  box-shadow: var(--shw-lcd-text);
+}
+
+.comp-clock {
+  right: 1rem;
+  bottom: 0.5rem;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+  padding: 0.3rem;
+  background-color: white;
+}
+
+.comp-rail {
+  top: 1rem;
+  right: 1rem;
+  height: 6rem;
+  width: 2.1rem;
+  background-color: black;
+  border-top: 1.7rem solid white;
+  border-right: 1.7rem solid white;
+}
+
+.comp-rail::before {
+  content: '';
+  position: relative;
+  left: -0.9rem;
+  top: -2.8rem;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 1.7rem 0.9rem;
+  border-color: transparent transparent white transparent;
+}
